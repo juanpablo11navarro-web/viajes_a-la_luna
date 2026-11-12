@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna Tour | Experiencia Espacial</title>
+
+<style>
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  font-family: Arial, sans-serif;
+
+  background: #07091c;
+
+  color: white;
+
+}
+
+nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 10;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px 7%;
+
+  background: rgba(5,7,25,.96);
+
+  border-bottom: 1px solid #00e5ff;
+
+}
+
+.logo {
+
+  color: #00e5ff;
+
+  font-size: 23px;
+
+  font-weight: bold;
+
+}
+
+nav button {
+
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  margin: 8px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+
+nav button:hover {
+
+  color: #00e5ff;
+
+}
+
+.pantalla {
+
+  display: none;
+
+  min-height: 85vh;
+
+  padding: 55px 8%;
+
+  animation: aparecer .5s ease;
+
+}
+
+#inicio {
+
+  display: block;
+
+  text-align: center;
+
+  padding-top: 80px;
+
+}
+
+@keyframes aparecer {
+
+  from {opacity:0; transform:translateY(15px);}
+
+  to {opacity:1; transform:translateY(0);}
+
+}
+
+h1 {
+
+  font-size: 42px;
+
+  color: #00e5ff;
+
+  margin-bottom: 20px;
+
+}
+
+h2 {
+
+  margin-bottom: 15px;
+
+}
+
+p {
+
+  line-height: 1.7;
+
+  color: #d5dcf5;
+
+  margin-bottom: 15px;
+
+}
+
+.hero {
+
+  max-width: 900px;
+
+  margin: auto;
+
+}
+
+.hero img {
+
+  width: 100%;
+
+  max-height: 390px;
+
+  object-fit: cover;
+
+  border-radius: 22px;
+
+  margin: 25px 0;
+
+  box-shadow: 0 0 30px #00e5ff44;
+
+}
+
+.btn {
+
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #00e5ff;
+
+  color: #05091b;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  margin: 7px;
+
+  transition: .3s;
+
+}
+
+.btn:hover {
+
+  transform: scale(1.06);
+
+  box-shadow: 0 0 20px #00e5ff;
+
+}
+
+.btn2 {
+
+  background: #8055e8;
+
+  color: white;
+
+}
+
+.card {
+
+  background: linear-gradient(145deg,#171d43,#10142e);
+
+  border: 1px solid #34416e;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  margin: 25px 0;
+
+  box-shadow: 0 8px 25px #0005;
+
+}
+
+.card img {
+
+  width: 100%;
+
+  border-radius: 13px;
+
+  margin-bottom: 15px;
+
+}
+
+input, select, textarea {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #454c80;
+
+  background: #0b102a;
+
+  color: white;
+
+  margin: 10px 0;
+
+}
+
+label {
+
+  display: block;
+
+  margin-top: 15px;
+
+  color: #00e5ff;
+
+}
+
+.precio {
+
+  color: #b794ff;
+
+  margin: 20px 0;
+
+}
+
+footer {
+
+  text-align: center;
+
+  padding: 25px;
+
+  background: #030510;
+
+  color: #aab2d0;
+
+}
+
+@media(max-width:600px) {
+
+  nav {
+
+    flex-direction: column;
+
+  }
+
+  nav button {
+
+    margin: 5px;
+
+  }
+
+  h1 {
+
+    font-size: 32px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+  <div class="logo">🚀 LUNA TOUR</div>
+
+  <div>
+
+    <button onclick="mostrar('inicio')">INICIO</button>
+
+    <button onclick="mostrar('historia')">HISTORIA</button>
+
+    <button onclick="mostrar('futuro')">FUTURO</button>
+
+    <button onclick="mostrar('contacto')">CONTACTO</button>
+
+  </div>
+
+</nav>
+
+<!-- INICIO -->
+
+<section id="inicio" class="pantalla">
+
+<div class="hero">
+
+<h1>Tu boleto a la Luna 🌕</h1>
+
+<h2>Una experiencia fuera de este mundo</h2>
+
+<p>
+
+Descubre los misterios del espacio, conoce la historia
+
+de los viajes lunares y explora el futuro del turismo espacial.
+
+</p>
+
+<img src="https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?w=1200">
+
+<button class="btn" onclick="mostrar('historia')">
+
+EXPLORAR
+
+</button>
+
+<button class="btn btn2" onclick="mostrar('contacto')">
+
+CONTACTAR
+
+</button>
+
+</div>
+
+</section>
+
+<!-- HISTORIA -->
+
+<section id="historia" class="pantalla">
+
+<h1>Historia de los viajes lunares</h1>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=1000">
+
+<h2>Viajes a la Luna</h2>
+
+<p>
+1.-Todo empezó como un sueño
+Hace más de 150 años nadie pensaba que se podía ir a la Luna. El escritor Julio Verne escribió un libro en 1865 donde unos hombres viajaban a la Luna en una bala gigante. La gente lo veía como ciencia ficción.
+
+Pero en 1957 todo cambió: la Unión Soviética lanzó el *Sputnik*, el primer satélite. Y empezó la *Carrera Espacial* entre la URSS y Estados Unidos, en plena Guerra Fría. Quien llegara primero a la Luna ganaba.
+
+Los soviéticos pegaron primero: en 1959 su sonda *Luna 2* fue la primera en chocar contra la Luna, y en 1961 *Yuri Gagarin* fue el primer humano en el espacio.
+
+2.- La era Apolo: sí llegamos
+El presidente de http://EE.UU., John F. Kennedy, prometió: "antes de que termine la década, vamos a poner un hombre en la Luna".
+
+Y lo cumplieron:
+
+*- Apollo 8 (1968):* Primera vez que humanos salen de la órbita de la Tierra y le dan la vuelta a la Luna. Ahí tomaron la famosa foto de la Tierra saliendo por el horizonte lunar.
+
+*- Apollo 11 (20 de julio de 1969):* El día histórico. Neil Armstrong, Buzz Aldrin y Michael Collins salieron el 16 de julio. El 20, Armstrong y Aldrin bajaron en el Mar de la Tranquilidad. Armstrong dijo: _"Es un pequeño paso para el hombre, un gran salto para la humanidad"_. Estuvieron 2 horas y media afuera, recogieron rocas y dejaron una placa que decía "Vinimos en paz".
+
+*- Después vinieron 5 más:* Apollo 12, 14, 15, 16 y 17. En total *12 astronautas caminaron en la Luna* y *24 llegaron a su órbita*. Apollo 13 fue el que casi no regresa por una explosión, pero lograron volver vivos.
+
+*- Apollo 17 (diciembre 1972):* La última vez que un humano pisó la Luna. Desde ahí, nadie volvió en más de 50 años porque era muy caro y muy peligroso.
+
+3.- El regreso: Programa Artemis
+Ahora estamos en la segunda parte de la historia.
+
+La NASA creó el programa *Artemis* - Artemis era la hermana gemela de Apolo en la mitología griega, la diosa de la Luna - para regresar, pero esta vez para quedarse.
+
+*- Artemis I (2022):* Fue sin astronautas, solo para probar la nave Orion.
+*- Artemis II (abril de 2026):* ¡Este año! 4 astronautas: Reid Wiseman, Victor Glover, Christina Koch y Jeremy Hansen dieron la vuelta a la Luna en 10 días, sin bajar, solo para probar que la nave es segura. Fue la primera vez que una mujer y un afroamericano orbitaron la Luna.
+
+*- Artemis III (2027 o después):* Esa sí va a bajar de nuevo. La idea es bajar en el polo sur de la Luna, donde hay hielo de agua. Esa agua se puede usar para tomar, para hacer oxígeno y hasta combustible. El plan a largo plazo es poner una base ahí y de ahí ir a Marte.
+
+Y ya no solo es http://EE.UU. China ya alunizó sondas en la cara oculta de la Luna en 2019 y 2024, y quiere mandar astronautas antes de 2030.
+
+
+
+
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Datos interesantes</h2>
+
+<p>🌕 12 personas han caminado sobre la Luna.</p>
+
+<p>🚀 El Saturno V fue el cohete de las misiones Apolo.</p>
+
+<p>🌎 La gravedad lunar es aproximadamente seis veces menor.</p>
+
+<p>⭐ La Luna no tiene una atmósfera como la Tierra.</p>
+
+</div>
+
+<button class="btn" onclick="mostrar('futuro')">SIGUIENTE</button>
+
+<button class="btn btn2" onclick="mostrar('inicio')">REGRESAR</button>
+
+</section>
+
+<!-- FUTURO -->
+
+<section id="futuro" class="pantalla">
+
+<h1>El futuro del turismo espacial</h1>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1457364887197-9150188c107b?w=1000">
+
+<h2>Viaja más allá de la Tierra</h2>
+
+<p>
+
+La tecnología espacial continúa avanzando.
+
+En el futuro, los viajes espaciales podrían
+
+permitir nuevas experiencias de exploración.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🚀 Cotizador Luna Tour</h2>
+
+<label>Selecciona los días:</label>
+
+<select id="dias">
+
+<option value="3">3 días</option>
+
+<option value="5">5 días</option>
+
+<option value="7">7 días</option>
+
+</select>
+
+<label>Selecciona los pasajeros:</label>
+
+<select id="pasajeros">
+
+<option value="1">1 pasajero</option>
+
+<option value="2">2 pasajeros</option>
+
+<option value="3">3 pasajeros</option>
+
+</select>
+
+<h2 class="precio" id="precio">
+
+Estimado: USD $1,250,000
+
+</h2>
+
+<button class="btn" onclick="cotizar()">
+
+CALCULAR
+
+</button>
+
+<button class="btn btn2" onclick="mostrar('contacto')">
+
+CONTACTAR
+
+</button>
+
+</div>
+
+<button class="btn" onclick="mostrar('historia')">HISTORIA</button>
+
+<button class="btn btn2" onclick="mostrar('inicio')">INICIO</button>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto" class="pantalla">
+
+<h1>Contacto Luna Tour</h1>
+
+<div class="card">
+
+<h2>Información del proyecto</h2>
+
+<p>📍 Ecatepec, Estado de México</p>
+
+<p>📧 contacto@lunatour.com</p>
+
+<p>📞 55-1234-5678</p>
+
+</div>
+
+<div class="card">
+
+<h2>Formulario de contacto</h2>
+
+<input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+<input type="email" id="correo" placeholder="Correo electrónico">
+
+<textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+
+<button class="btn" onclick="enviar()">
+
+ENVIAR MENSAJE
+
+</button>
+
+<button class="btn btn2" onclick="mostrar('inicio')">
+
+REGRESAR AL INICIO
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Luna Tour | Proyecto escolar de turismo espacial 🚀</p>
+
+</footer>
+
+<script>
+
+function mostrar(id) {
+
+  document.querySelectorAll('.pantalla').forEach(p => {
+
+    p.style.display = 'none';
+
+  });
+
+  document.getElementById(id).style.display = 'block';
+
+  window.scrollTo(0,0);
+
+}
+
+function cotizar() {
+
+  let dias = Number(document.getElementById('dias').value);
+
+  let pasajeros = Number(document.getElementById('pasajeros').value);
+
+  let total = 1250000 * pasajeros;
+
+  document.getElementById('precio').innerText =
+
+    'Total estimado: USD $' + total.toLocaleString('en-US');
+
+  alert('Cotización calculada para ' + dias +
+
+        ' días y ' + pasajeros + ' pasajeros.');
+
+}
+
+function enviar() {
+
+  let nombre = document.getElementById('nombre').value;
+
+  let correo = document.getElementById('correo').value;
+
+  let mensaje = document.getElementById('mensaje').value;
+
+  if(nombre === '' || correo === '' || mensaje === '') {
+
+    alert('Completa todos los campos.');
+
+    return;
+
+  }
+
+  alert('¡Gracias ' + nombre +
+
+        '! Tu mensaje fue registrado en esta demostración.');
+
+  document.getElementById('nombre').value = '';
+
+  document.getElementById('correo').value = '';
+
+  document.getElementById('mensaje').value = '';
+
+  mostrar('inicio');
+
+}
+
+</script>
+
+</body>
+
+</html>
